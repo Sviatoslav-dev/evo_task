@@ -7,17 +7,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   sayHello.onclick = function() {
     fetch('/say_hello', {
-        method: 'POST',
-        body: JSON.stringify({"name": inputName.value}),
-        cache: 'no-cache',
-        headers: new Headers({
-          'content-type': 'application/json',
-        }),
-    }).then(response => {
-        return response.json()
-    }).then(text => {
-        massage.innerText = text[0]["result"]
-        inputName.value = ""
+      method: 'POST',
+      body: JSON.stringify({ name: inputName.value }),
+      cache: 'no-cache',
+      headers: new Headers({
+        'content-type': 'application/json',
+      }),
     })
+      .then(response => response.json())
+      .then(text => {
+        massage.innerText = text[0]['result'];
+        inputName.value = '';
+      });
   };
-})
+});
