@@ -5,6 +5,7 @@
   "scripts": {
     "lint": "eslint ./",
     "lint:css": "stylelint \"**/css/*.css\"",
+    "lint:fmt": "prettier --check ./src --ignore-path .gitignore",
     "lint:fix": "eslint ./ --fix"
   },
   "keywords": [],
