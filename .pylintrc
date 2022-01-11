@@ -4,3 +4,5 @@ disable=
     E0401, # import-error
     C0116, # missing-function-docstring
     W0703, # broad-except
+    E1101, # no-member
+    C0115, # missing-class-docstring

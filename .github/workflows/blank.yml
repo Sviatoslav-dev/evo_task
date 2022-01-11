@@ -30,4 +30,4 @@ jobs:
           pip install pylint
       - name: Analysing the code with pylint
         run: |
-          python -m pylint main.py
+          python -m pylint main.py core/__init__.py model/names.py
