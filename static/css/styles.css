@@ -44,3 +44,40 @@ button {
     border-radius: 10px;
     box-shadow: 0 2px 10px 0 var(--todo-box-shadow);
 }
+
+.list{
+    max-width: 400px;
+    display: block;
+    margin: 5% auto 40px;
+    background-color: var(--todo-background-color);
+    padding: 30px;
+    padding-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px 0 var(--todo-box-shadow);
+    min-height: 60%;
+    color: var(--text-color);
+}
+
+.navigation {
+    padding-bottom: 10px;
+    display: block;
+    margin: auto auto 10px;
+    padding: 30px;
+}
+
+.page_num, .page_buttons{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content; 
+}
+
+.nav_text{
+    display: inline-block;
+    color: var(--text-color);
+}
+
+.say-hello {
+    margin-right: 0;
+    padding-top: 0;
+}

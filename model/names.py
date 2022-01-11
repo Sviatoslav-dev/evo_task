@@ -25,3 +25,16 @@ class Name(db.Model):
             return -1
 
         return obj
+
+    @classmethod
+    def get_all_names(cls, page, page_size):
+        all_names = cls.query.limit(page_size).offset((page - 1) * page_size).all()
+        all_names_list = []
+        for name_dict in all_names:
+            name = [v for k, v in name_dict.__dict__.items() if k == "name"]
+            all_names_list.append(name[0])
+        return all_names_list
+
+    @classmethod
+    def names_count(cls):
+        return cls.query.count()

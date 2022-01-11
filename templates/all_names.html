@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+    <script src="{{ url_for('static', filename='js/all_names.js') }}"></script>
+  </head>
+  <body>
+    <div class="list">
+      <button id="say-hello">Привітання</button>
+      <h1>Усі імена</h1>
+      {% for n in names %}
+          <p>{{n}}</p>
+      {% endfor %}
+    </div>
+    <div class="navigation">
+      <div class="page_num">
+        <p class="nav_text" id="page">{{page}}</p>
+        <p class="nav_text">/</p>
+        <p class="nav_text" id="pages">{{pages}}</p>
+      </div>
+      <div class="page_buttons">
+        <button id="prev" class="nav-buttons">Назад</button>
+        <button id="next" class="nav-buttons">Вперед</button>
+      </div>
+    </div>
+  </body>
+</html>
